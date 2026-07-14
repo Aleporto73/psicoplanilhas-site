@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
+import { WhatsAppFloat } from "@/components/site/whatsapp-float";
 import "./globals.css";
 import "./refinements.css";
+import "./hero-contact.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://psicoplanilhas.com"),
@@ -28,7 +30,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
   return (
     <html lang="pt-BR">
-      <body>{children}</body>
+      <body>
+        {children}
+        <WhatsAppFloat />
+      </body>
     </html>
   );
 }
