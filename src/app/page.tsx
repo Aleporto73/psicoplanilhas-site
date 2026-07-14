@@ -22,43 +22,42 @@ const assistants = [
   {
     label: "Relatórios",
     title: "Assistente de Relatórios",
-    text: "Apoio para organizar informações e estruturar textos profissionais com mais clareza.",
+    text: "Organiza informações e apoia a estruturação de textos profissionais.",
   },
   {
     label: "Prática ABA",
     title: "Assistente ABA",
-    text: "Apoio para avaliação funcional, planejamento de intervenção e organização de informações da prática ABA.",
+    text: "Apoia avaliação funcional, planejamento e organização da prática ABA.",
   },
   {
     label: "Documentação",
     title: "Assistente Laudos",
-    text: "Apoio à estruturação das seções do laudo psicológico conforme a Resolução CFP nº 06/2019.",
-    note: "Uso exclusivo por psicólogas e psicólogos.",
+    text: "Apoia a estruturação do laudo psicológico conforme a Resolução CFP nº 06/2019.",
   },
 ];
 
 const testimonials = [
   {
     title: "Mais agilidade na rotina",
-    text: "As planilhas facilitaram muito meu dia a dia. Consigo organizar as informações e consultar os resultados com muito mais praticidade.",
+    text: "As planilhas facilitaram meu dia a dia e deixaram a consulta dos resultados muito mais prática.",
     name: "Marília Vargas",
     role: "Psicopedagoga",
   },
   {
-    title: "Tudo reunido em um só lugar",
-    text: "Antes eu precisava procurar materiais em várias pastas. Agora encontro as planilhas rapidamente e consigo manter minha rotina mais organizada.",
+    title: "Tudo em um só lugar",
+    text: "Agora encontro as planilhas rapidamente e consigo manter minha rotina mais organizada.",
     name: "Daniela Santos",
     role: "Psicopedagoga",
   },
   {
-    title: "Apoio para estruturar relatórios",
-    text: "O Assistente de Relatórios ajuda a organizar as informações e oferece um ótimo ponto de partida para a redação e revisão profissional.",
+    title: "Apoio para relatórios",
+    text: "O assistente ajuda a organizar as informações e oferece um bom ponto de partida para a redação.",
     name: "Carla Ribeiro",
     role: "Psicóloga",
   },
   {
     title: "Excelente custo-benefício",
-    text: "A biblioteca é ampla, os materiais são fáceis de acessar e o pagamento único tornou a solução muito vantajosa para minha rotina.",
+    text: "A biblioteca é ampla, fácil de acessar e o pagamento único tornou a solução muito vantajosa.",
     name: "Regina L.",
     role: "Psicopedagoga",
   },
@@ -78,7 +77,7 @@ const faqItems = [
   {
     question: "Quem pode utilizar o Assistente Laudos?",
     answer:
-      "O Assistente Laudos é destinado exclusivamente a psicólogas e psicólogos, pois o laudo psicológico é documento privativo da profissão.",
+      "O Assistente Laudos é destinado exclusivamente a psicólogos, pois o laudo psicológico é documento privativo da profissão.",
   },
   {
     question: "O acesso é vitalício?",
@@ -208,18 +207,11 @@ export default function Home() {
               <p>Apoio complementar para organizar informações e estruturar documentos profissionais.</p>
             </div>
 
-            <div className="assistants-grid">
-              {assistants.map((assistant) => (
-                <article key={assistant.title} className="assistant-card">
-                  <span>{assistant.label}</span>
-                  <h3>{assistant.title}</h3>
-                  <p>{assistant.text}</p>
-                  {assistant.note ? <strong className="assistant-note">{assistant.note}</strong> : null}
-                </article>
-              ))}
-            </div>
-
             <div className="report-video-panel">
+              <video className="video-player" controls preload="metadata" playsInline aria-label="Demonstração do Assistente de Relatórios">
+                <source src="/videos/assistente-relatorios.mp4" type="video/mp4" />
+                Seu navegador não suporta a reprodução deste vídeo.
+              </video>
               <div className="report-video-copy">
                 <span className="eyebrow">Assistente de Relatórios</span>
                 <h2>Veja o apoio à estruturação textual em funcionamento.</h2>
@@ -228,11 +220,16 @@ export default function Home() {
                   A análise, a revisão e a responsabilidade pelo documento permanecem com o profissional.
                 </p>
               </div>
+            </div>
 
-              <video className="video-player" controls preload="metadata" playsInline aria-label="Demonstração do Assistente de Relatórios">
-                <source src="/videos/assistente-relatorios.mp4" type="video/mp4" />
-                Seu navegador não suporta a reprodução deste vídeo.
-              </video>
+            <div className="assistants-grid assistants-grid--compact">
+              {assistants.map((assistant) => (
+                <article key={assistant.title} className="assistant-card assistant-card--compact">
+                  <span>{assistant.label}</span>
+                  <h3>{assistant.title}</h3>
+                  <p>{assistant.text}</p>
+                </article>
+              ))}
             </div>
           </div>
         </section>
@@ -273,7 +270,7 @@ export default function Home() {
                   <li>Mais de 100 planilhas profissionais</li>
                   <li>Assistente de Relatórios incluso</li>
                   <li>Assistente ABA incluso</li>
-                  <li>Assistente Laudos para psicólogas e psicólogos</li>
+                  <li>Assistente Laudos exclusivo para psicólogos</li>
                   <li>Pagamento único</li>
                   <li>Acesso vitalício</li>
                 </ul>
