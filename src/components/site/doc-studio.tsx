@@ -2,11 +2,11 @@ import { docStudioBenefits, docStudioSteps, docStudioProfessions } from "@/conte
 
 export function DocStudio() {
   return (
-    <section id="doc-studio">
+    <section id="doc-studio" className="section--alt">
       <div className="container">
         <div className="section-head">
           <span className="eyebrow">Bônus incluído</span>
-          <h2>Doc Studio: crie e imprima seus documentos.</h2>
+          <h2>Studio DOC: crie e imprima seus documentos.</h2>
           <p>
             Ferramenta completa para montar, preencher e imprimir documentos profissionais —
             incluída no seu acesso vitalício, sem custo extra.
@@ -20,7 +20,7 @@ export function DocStudio() {
             preload="metadata"
             playsInline
             poster="/videos/doc-studio-poster.png"
-            aria-label="Demonstração do Doc Studio"
+            aria-label="Demonstração do Studio DOC"
           >
             <source src="/videos/doc-studio-demo.mp4" type="video/mp4" />
             Seu navegador não suporta a reprodução deste vídeo.

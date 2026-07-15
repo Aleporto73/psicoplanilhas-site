@@ -88,7 +88,6 @@ export const docStudioProfessions = [
       "Autorização para atendimento de menor",
       "Protocolo de atendimento online",
       "Declaração",
-      "TCLE simplificado",
     ],
     instrumentos: [
       "Anamnese infantil e adolescente",
