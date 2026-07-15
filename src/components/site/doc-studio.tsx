@@ -43,7 +43,7 @@ export function DocStudio() {
               <summary>
                 <span className="catalog-letter catalog-letter--name">{profession.name}</span>
                 <span className="catalog-count">
-                  {profession.modelos.length} modelos · {profession.instrumentos.length} instrumentos
+                  {profession.modelos.length + profession.instrumentos.length} documentos
                 </span>
                 <span className="catalog-chevron" aria-hidden="true">⌄</span>
               </summary>

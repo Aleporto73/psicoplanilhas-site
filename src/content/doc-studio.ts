@@ -12,7 +12,7 @@ export const docStudioBenefits = [
 export const docStudioSteps = [
   "Escolha a profissão e o modelo",
   "Preencha os campos guiados",
-  "Acompanhe o documento montado ao lado",
+  "Acompanhe o documento ao lado",
   "Copie ou imprima em A4/PDF",
 ] as const;
 
