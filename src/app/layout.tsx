@@ -1,9 +1,20 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
+import { Inter, Source_Serif_4 } from "next/font/google";
 import { WhatsAppFloat } from "@/components/site/whatsapp-float";
 import "./globals.css";
-import "./refinements.css";
-import "./hero-contact.css";
+
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  variable: "--font-sans",
+});
+
+const sourceSerif = Source_Serif_4({
+  subsets: ["latin"],
+  weight: ["400", "600"],
+  variable: "--font-serif",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://psicoplanilhas.com"),
@@ -30,7 +41,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
   return (
     <html lang="pt-BR">
-      <body>
+      <body className={`${inter.variable} ${sourceSerif.variable}`}>
         {children}
         <WhatsAppFloat />
       </body>
