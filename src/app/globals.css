@@ -385,3 +385,4 @@ main > section {
 .catalog-letter--name { font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif; font-size: var(--text-base); font-weight: 500; }
 .docstudio-sublabel { margin: var(--s-3) 0 var(--s-1); color: var(--brand); font-size: var(--text-xs); font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
 #doc-studio .steps-list { margin-top: var(--s-12); }
+#doc-studio .steps-list li > span { color: var(--brand); } /* números em verde da marca, não no cinza apagado */
