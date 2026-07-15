@@ -246,10 +246,17 @@ main > section {
 .catalog-group > summary:focus-visible { outline: 2px solid var(--brand); outline-offset: 2px; }
 .catalog-letter { font-family: var(--font-serif), Georgia, serif; font-size: var(--text-xl); color: var(--ink); }
 .catalog-count { margin-left: auto; color: var(--ink-soft); font-size: var(--text-sm); }
-.catalog-chevron { color: var(--ink-soft); font-size: var(--text-xl); line-height: 0.7; transition: transform 150ms ease; }
+.catalog-chevron { color: var(--brand); font-size: var(--text-xl); line-height: 0.7; transition: transform 150ms ease; }
 .catalog-group[open] .catalog-chevron { transform: rotate(180deg); }
 .catalog-group ul { margin: 0; padding: 0 0 var(--s-4); list-style: none; }
 .catalog-group li { padding-block: var(--s-2); color: var(--ink-soft); font-size: var(--text-sm); }
+
+/* planilhas: cabeçalhos das letras em 3 colunas; letra aberta ocupa a largura toda (mobile = 1 coluna) */
+#planilhas .catalog-groups { display: grid; grid-template-columns: repeat(3, 1fr); column-gap: var(--s-8); }
+#planilhas .catalog-group[open] { grid-column: 1 / -1; }
+#planilhas .catalog-count { display: none; } /* remove o número por letra (poluído) */
+#planilhas .catalog-chevron { margin-left: auto; } /* sem o número, a seta assume o empurrão pra direita */
+@media (max-width: 768px) { #planilhas .catalog-groups { grid-template-columns: 1fr; } }
 
 /* steps — números grandes e apagados, sem painel */
 .steps-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--s-8); margin: 0; padding: 0; list-style: none; }
@@ -378,3 +385,12 @@ main > section {
   .footer-inner { grid-template-columns: 1fr; }
   .footer-links { justify-content: flex-start; }
 }
+
+/* ============================================================
+   8. DOC STUDIO (bônus) — reaproveita audience-*, report-video-*, catalog-*, steps-list
+   ============================================================ */
+.catalog-letter--name { font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif; font-size: var(--text-base); font-weight: 500; }
+.docstudio-sublabel { margin: var(--s-3) 0 var(--s-1); color: var(--brand); font-size: var(--text-xs); font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
+#doc-studio .steps-list { margin-top: var(--s-12); }
+#doc-studio .steps-list li > span { color: var(--brand); } /* números em verde da marca, não no cinza apagado */
+#doc-studio .steps-list strong { font-size: var(--text-sm); } /* fonte menor pra cada passo caber em 1 linha */

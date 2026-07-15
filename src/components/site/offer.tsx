@@ -10,6 +10,7 @@ export function Offer({ checkoutUrl }: { checkoutUrl: string }) {
             <li>Assistente de Relatórios incluso</li>
             <li>Assistente ABA incluso</li>
             <li>Assistente Laudos exclusivo para psicólogos</li>
+            <li>Studio DOC incluso — crie e imprima documentos profissionais</li>
             <li>Pagamento único</li>
             <li>Acesso vitalício</li>
           </ul>
