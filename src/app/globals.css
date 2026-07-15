@@ -251,6 +251,11 @@ main > section {
 .catalog-group ul { margin: 0; padding: 0 0 var(--s-4); list-style: none; }
 .catalog-group li { padding-block: var(--s-2); color: var(--ink-soft); font-size: var(--text-sm); }
 
+/* planilhas: cabeçalhos das letras em 3 colunas; letra aberta ocupa a largura toda (mobile = 1 coluna) */
+#planilhas .catalog-groups { display: grid; grid-template-columns: repeat(3, 1fr); column-gap: var(--s-8); }
+#planilhas .catalog-group[open] { grid-column: 1 / -1; }
+@media (max-width: 768px) { #planilhas .catalog-groups { grid-template-columns: 1fr; } }
+
 /* steps — números grandes e apagados, sem painel */
 .steps-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--s-8); margin: 0; padding: 0; list-style: none; }
 .steps-list li { display: grid; gap: var(--s-2); }
