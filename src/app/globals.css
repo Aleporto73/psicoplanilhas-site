@@ -210,6 +210,9 @@ main > section {
 .hero-proof { margin: var(--s-6) 0 0; color: var(--ink-soft); font-size: var(--text-sm); }
 .hero-stars { color: var(--ink); letter-spacing: 0.1em; margin-right: var(--s-2); }
 .video-player { display: block; width: 100%; aspect-ratio: 16 / 9; border: 0; border-radius: var(--radius-md); background: var(--ink); object-fit: cover; }
+/* remove o degradê preto da barra de controles nativa */
+/* ponytail: só Chrome/Edge/Safari; Firefox mantém seus próprios controles */
+.video-player::-webkit-media-controls-panel { background: none; }
 .hero-video-card { align-self: center; }
 .hero-video-card .video-player { border-radius: var(--radius-lg); border: 1px solid var(--line); }
 
