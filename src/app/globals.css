@@ -7,6 +7,7 @@
   --line: #e4e7ec;
   --ink: #14181f;
   --ink-soft: #5a6472;
+  --petrol: #0d3340; /* fundo do card de oferta */
   --brand: #0e7c6b;
   --brand-soft: #e9f2f0;
   --action: #f0563f;
@@ -271,7 +272,7 @@ main > section {
 .offer-card {
   max-width: 640px;
   margin-inline: auto;
-  background: var(--ink);
+  background: var(--petrol);
   border-radius: var(--radius-lg);
   padding: var(--s-12);
   color: var(--paper);
