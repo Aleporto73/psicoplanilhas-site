@@ -214,6 +214,7 @@ main > section {
 
 /* cards (audiences, assistants, testimonials — mesmo modelo) */
 .audience-card, .assistant-card, .testimonial-card {
+  margin: 0; /* figure (testimonial) traz margin: 16px 40px por padrão do navegador */
   border: 1px solid var(--line);
   border-radius: var(--radius-md);
   background: var(--paper);
