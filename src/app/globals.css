@@ -118,7 +118,7 @@ main > section {
 .assistants-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--s-4); margin-top: var(--s-8); }
 .testimonials-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s-4); margin-top: var(--s-8); }
 .report-video-panel { display: grid; grid-template-columns: 1fr; gap: var(--s-6); margin-top: var(--s-12); }
-.faq-grid { display: grid; grid-template-columns: 0.8fr 1.2fr; align-items: start; gap: var(--s-12); }
+.faq-grid { display: grid; grid-template-columns: 0.8fr 1.2fr; align-items: center; gap: var(--s-12); }
 .footer-inner { display: grid; grid-template-columns: 1fr auto; gap: var(--s-6) var(--s-8); align-items: start; }
 
 /* ============================================================
@@ -291,9 +291,10 @@ main > section {
 .offer-card .price-login { display: inline-block; margin-top: var(--s-4); color: var(--paper); font-size: var(--text-xs); font-weight: 600; }
 
 /* faq — lista com divisores */
+.faq-grid .section-head { margin-bottom: 0; } /* coluna lateral: sem margem de empilhamento */
 .faq-list { display: grid; border-top: 1px solid var(--line); }
 .faq-list details { border-bottom: 1px solid var(--line); }
-.faq-list summary { padding-block: var(--s-4); cursor: pointer; font-size: var(--text-lg); font-weight: 500; }
+.faq-list summary { padding-block: var(--s-3); cursor: pointer; font-size: var(--text-base); font-weight: 500; }
 .faq-list p { margin: 0 0 var(--s-4); max-width: 65ch; color: var(--ink-soft); }
 
 /* notice */
