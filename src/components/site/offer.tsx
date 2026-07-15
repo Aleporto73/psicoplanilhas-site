@@ -1,7 +1,4 @@
-const checkoutUrl =
-  "https://www.payment.eng.br/checkout?price=3FKRHT7N&product=N96CYS7N";
-
-export function Offer() {
+export function Offer({ checkoutUrl }: { checkoutUrl: string }) {
   return (
     <section id="oferta">
       <div className="container">
