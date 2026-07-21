@@ -394,3 +394,71 @@ main > section {
 #doc-studio .steps-list { margin-top: var(--s-12); }
 #doc-studio .steps-list li > span { color: var(--brand); } /* números em verde da marca, não no cinza apagado */
 #doc-studio .steps-list strong { font-size: var(--text-sm); } /* fonte menor pra cada passo caber em 1 linha */
+
+/* ============================================================
+   9. CARROSSEL DE PRÉVIAS (planilhas) — Embla
+   ============================================================ */
+.preview-carousel { margin-bottom: var(--s-8); }
+.preview-nav { display: flex; justify-content: flex-end; gap: var(--s-2); margin-bottom: var(--s-4); }
+.preview-arrow {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--paper);
+  color: var(--ink);
+  font-size: var(--text-2xl);
+  line-height: 1;
+  cursor: pointer;
+  transition: border-color 150ms ease, opacity 150ms ease;
+}
+.preview-arrow:hover:not(:disabled) { border-color: var(--ink-soft); }
+.preview-arrow:disabled { opacity: 0.3; cursor: default; }
+
+.preview-viewport { overflow: hidden; }
+.preview-track {
+  display: flex;
+  gap: var(--s-4);
+  margin: 0; /* ul traz padding/margin padrão do navegador */
+  padding: 0;
+  list-style: none;
+  touch-action: pan-y pinch-zoom; /* arrastar na horizontal sem travar a rolagem da página */
+}
+/* desktop grande: 7 cards (o container trava em 1120px, 8 deixaria o card ilegível) */
+.preview-slide { flex: 0 0 auto; width: calc((100% - 4 * var(--s-4)) / 5.2); min-width: 0; }
+.preview-thumb {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  transition: border-color 150ms ease;
+}
+/* sem :hover no card — a imagem não é clicável, não deve parecer que é */
+
+/* modelos de planilha — link discreto entre o carrossel e a lista alfabética */
+.sheet-models { margin-block: var(--s-12); text-align: center; }
+.sheet-models-title { margin: 0 0 var(--s-2); color: var(--ink); font-size: var(--text-base); font-weight: 500; }
+.sheet-models-sub { margin: 0 0 var(--s-4); color: var(--ink-soft); font-size: var(--text-sm); }
+.sheet-models-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--s-3); }
+.sheet-models .btn { font-size: var(--text-sm); } /* mantém os 48px de alvo de toque, só o texto fica discreto */
+
+@media (max-width: 1279px) { /* notebook: 5 */
+  .preview-slide { width: calc((100% - 4 * var(--s-4)) / 5); }
+}
+@media (max-width: 1023px) { /* tablet: 3 */
+  .preview-slide { width: calc((100% - 2 * var(--s-4)) / 3); }
+}
+@media (max-width: 767px) { /* celular: 2 */
+  .preview-slide { width: calc((100% - 1 * var(--s-4)) / 2); }
+}
+@media (max-width: 480px) { /* botões empilhados, mesmo padrão do .hero-actions */
+  .sheet-models-actions { flex-direction: column; }
+  .sheet-models .btn { width: 100%; }
+}

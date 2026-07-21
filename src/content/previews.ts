@@ -1,0 +1,37 @@
+import type { SpreadsheetPreview } from "./types";
+
+export const previews: SpreadsheetPreview[] = [
+  /* primeiras 6 na ordem especificada */
+  { image: "Abblrs.png",        category: "Autismo",          name: "ABLLS-R" },
+  { image: "cars.png",          category: "Autismo",          name: "CARS-2" },
+  { image: "srs2.png",          category: "Autismo",          name: "SRS-2" },
+  { image: "TAC.png",           category: "Aprendizagem",     name: "TAC" },
+  { image: "tds2.png",          category: "Aprendizagem",     name: "TDE-2" },
+  { image: "torredelondres.png",category: "Neuropsicologia",  name: "Torre de Londres" },
+  /* demais imagens na ordem original */
+  { image: "catq.png",          category: "Autismo",          name: "CAT-Q" },
+  { image: "protea.png",        category: "Autismo",          name: "PROTEA-R" },
+  { image: "conners.png",       category: "TDAH",             name: "CONNERS" },
+  { image: "Etdah.png",         category: "TDAH",             name: "ETDAH – Pais e CriAd" },
+  { image: "snap.png",          category: "TDAH",             name: "SNAP-IV" },
+  { image: "masc.png",          category: "Ansiedade",        name: "MASC" },
+  { image: "scared.png",        category: "Ansiedade",        name: "SCARED-II" },
+  { image: "hamd.png",          category: "Depressão",        name: "HAM-D" },
+  { image: "PhQ.png",           category: "Depressão",        name: "PHQ-9" },
+  { image: "Discalculia.png",   category: "Aprendizagem",     name: "Discalculia" },
+  { image: "disgrafia.png",     category: "Aprendizagem",     name: "Disgrafia" },
+  { image: "prolec.png",        category: "Aprendizagem",     name: "PROLEC" },
+  { image: "ravlt.png",         category: "Neuropsicologia",  name: "RAVLT" },
+  { image: "stroop.png",        category: "Neuropsicologia",  name: "Stroop" },
+  { image: "tena.png",          category: "Neuropsicologia",  name: "TENA" },
+  { image: "Idadi.png",         category: "Desenvolvimento",  name: "IDADI" },
+  { image: "IDHC.png",          category: "Desenvolvimento",  name: "IDHC" },
+  { image: "gifts.png",         category: "Altas habilidades",name: "GIFTS" },
+  { image: "scbc.png",          category: "Altas habilidades",name: "SRBCSS e SCAHSD" },
+  { image: "cps.png",           category: "Altas habilidades",name: "CPS" },
+  { image: "Quati.png",         category: "Personalidade",    name: "QUATI" },
+  { image: "wisc4.png",         category: "Inteligência",     name: "WISC-IV" },
+  { image: "Thias.png",         category: "Inteligência",     name: "TIAH/S" },
+  { image: "Thasc.png",         category: "Habilidades sociais", name: "THAS-C" },
+  { image: "cuida.png",         category: "Saúde mental",     name: "Cuida-SM" },
+];

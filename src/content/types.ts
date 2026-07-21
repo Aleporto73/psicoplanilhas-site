@@ -20,3 +20,9 @@ export type FaqItem = {
   question: string;
   answer: string;
 };
+
+export type SpreadsheetPreview = {
+  image: string; /* arquivo dentro de /public/planilhas */
+  category: string;
+  name: string;
+};

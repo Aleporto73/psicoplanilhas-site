@@ -29,7 +29,7 @@ export function SpreadsheetAccordion() {
   return (
     <div className="catalog-groups">
       {groups.map((group) => (
-        <details key={group.letter} className="catalog-group">
+        <details key={group.letter} className="catalog-group" open={group.letter === "A" || group.letter === "S"}>
           <summary>
             <span className="catalog-letter">{group.letter}</span>
             <span className="catalog-count">{group.items.length}</span>
