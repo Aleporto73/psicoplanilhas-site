@@ -39,7 +39,11 @@ export function DocStudio() {
 
         <div className="catalog-groups">
           {docStudioProfessions.map((profession) => (
-            <details key={profession.name} className="catalog-group">
+            <details
+              key={profession.name}
+              className="catalog-group"
+              open={profession.name === "Psicologia / Neuropsicologia"}
+            >
               <summary>
                 <span className="catalog-letter catalog-letter--name">{profession.name}</span>
                 <span className="catalog-count">
