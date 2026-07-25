@@ -399,6 +399,8 @@ main > section {
    9. CARROSSEL DE PRÉVIAS (planilhas) — Embla
    ============================================================ */
 .preview-carousel { margin-bottom: var(--s-8); }
+/* faixa avulsa (entre depoimentos e oferta): o padding da seção já dá o respiro */
+.section--tight .preview-carousel { margin-bottom: 0; }
 .preview-nav { display: flex; justify-content: flex-end; gap: var(--s-2); margin-bottom: var(--s-4); }
 .preview-arrow {
   width: 40px;

@@ -6,6 +6,7 @@ import { HowItWorks } from "@/components/site/how-it-works";
 import { Assistants } from "@/components/site/assistants";
 import { DocStudio } from "@/components/site/doc-studio";
 import { Testimonials } from "@/components/site/testimonials";
+import { SpreadsheetCarousel } from "@/components/site/spreadsheet-carousel";
 import { Offer } from "@/components/site/offer";
 import { Faq } from "@/components/site/faq";
 import { Notice } from "@/components/site/notice";
@@ -24,6 +25,14 @@ export function Landing({ checkoutUrl }: { checkoutUrl: string }) {
         <Assistants />
         <DocStudio />
         <Testimonials />
+
+        {/* segunda faixa de prévias, ordem inversa — só imagens, sem título */}
+        <section className="section--tight" aria-label="Mais prévias das planilhas">
+          <div className="container">
+            <SpreadsheetCarousel reverse />
+          </div>
+        </section>
+
         <Offer checkoutUrl={checkoutUrl} />
         <Faq />
         <Notice />

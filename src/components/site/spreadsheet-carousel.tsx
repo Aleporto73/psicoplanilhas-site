@@ -5,7 +5,9 @@ import { useCallback, useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { previews } from "@/content/previews";
 
-export function SpreadsheetCarousel() {
+export function SpreadsheetCarousel({ reverse = false }: { reverse?: boolean }) {
+  /* cópia antes de reverter: previews.reverse() mutaria a lista e viraria o outro carrossel também */
+  const slides = reverse ? [...previews].reverse() : previews;
   const [emblaRef, emblaApi] = useEmblaCarousel({ align: "start", containScroll: false });
   const [canPrev, setCanPrev] = useState(false);
   const [canNext, setCanNext] = useState(false);
@@ -50,7 +52,7 @@ export function SpreadsheetCarousel() {
 
       <div className="preview-viewport" ref={emblaRef}>
         <ul className="preview-track" aria-label="Prévias das planilhas">
-          {previews.map((preview) => (
+          {slides.map((preview) => (
             <li key={preview.image} className="preview-slide">
               {/* só a imagem: sem link, sem legenda. O nome vive no alt (leitor de tela) e na lista alfabética. */}
               <Image
