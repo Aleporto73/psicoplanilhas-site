@@ -17,7 +17,7 @@ const sourceSerif = Source_Serif_4({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://psicoplanilhas.com"),
+  metadataBase: new URL("https://psicoplanilha.com"),
   title: {
     default: "PsicoPlanilhas 2.0 | Planilhas profissionais",
     template: "%s | PsicoPlanilhas 2.0",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://psicoplanilhas.com",
+    url: "https://psicoplanilha.com",
     siteName: "PsicoPlanilhas 2.0",
     title: "PsicoPlanilhas 2.0 | Planilhas profissionais",
     description:

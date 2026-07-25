@@ -14,7 +14,7 @@ export function Footer() {
           <a href="#duvidas">Dúvidas</a>
           <a href="https://app.psicoplanilha.com/login">Acessar plataforma</a>
         </div>
-        <small>© {new Date().getFullYear()} psicoplanilhas.com — Todos os direitos reservados.</small>
+        <small>© {new Date().getFullYear()} psicoplanilha.com — Todos os direitos reservados.</small>
       </div>
     </footer>
   );
