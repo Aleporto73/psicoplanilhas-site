@@ -21,7 +21,7 @@ export function Offer({ checkoutUrl }: { checkoutUrl: string }) {
             <p>Sem mensalidade.</p>
           </div>
 
-          <a className="btn btn--primary" href={checkoutUrl}>Quero acesso às planilhas</a>
+          <a className="btn btn--primary" href={checkoutUrl}>Adquirir acesso</a>
           <small className="secure-copy">Pagamento seguro • acesso enviado por e-mail</small>
           <a className="price-login" href="https://app.psicoplanilha.com/login">Já sou cliente</a>
         </div>
