@@ -3,13 +3,12 @@ export function Offer({ checkoutUrl }: { checkoutUrl: string }) {
     <section id="oferta">
       <div className="container">
         <div className="offer-card">
-          <h2>Biblioteca completa e três assistentes em um único acesso.</h2>
+          <h2>Biblioteca completa e dois assistentes em um único acesso.</h2>
 
           <ul>
             <li>Mais de 100 planilhas profissionais</li>
             <li>Assistente de Relatórios incluso</li>
             <li>Assistente ABA incluso</li>
-            <li>Assistente Laudos exclusivo para psicólogos</li>
             <li>Studio DOC incluso — crie e imprima documentos profissionais</li>
             <li>Pagamento único</li>
             <li>Acesso vitalício</li>
