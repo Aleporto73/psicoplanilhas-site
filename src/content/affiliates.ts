@@ -7,6 +7,7 @@ export const affiliates: Record<string, string> = {
   lais: "6d4a8838-e6a5-4cf4-942b-e5baadd7aea6",
   livia: "0b045096-bcb2-4314-9ce3-d149164f3894",
   jayane: "406df519-20f4-4d00-9f22-563ac21b3b07",
+  luciana: "b2d1d180-cded-4ba7-9ce7-77405581e359",
 };
 
 export function checkoutUrl(affiliateId?: string) {
