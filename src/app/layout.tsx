@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     template: "%s | PsicoPlanilhas 2.0",
   },
   description:
-    "Mais de 100 planilhas profissionais e três assistentes inclusos para psicologia, psicopedagogia e neuropsicopedagogia.",
+    "Mais de 100 planilhas profissionais e dois assistentes inclusos para psicologia, psicopedagogia e neuropsicopedagogia.",
   alternates: {
     canonical: "/",
   },

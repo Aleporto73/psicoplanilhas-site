@@ -10,7 +10,6 @@ export function Footer() {
         </div>
         <div className="footer-links">
           <a href="#planilhas">Planilhas</a>
-          <a href="#assistentes">Assistentes</a>
           <a href="#duvidas">Dúvidas</a>
           <a href="https://app.psicoplanilha.com/login">Acessar plataforma</a>
         </div>

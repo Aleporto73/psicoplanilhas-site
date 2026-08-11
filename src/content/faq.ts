@@ -12,14 +12,9 @@ export const faqItems: FaqItem[] = [
       "Não. Eles apoiam a organização e a estruturação textual. A avaliação, a interpretação e a responsabilidade técnica permanecem com o profissional.",
   },
   {
-    question: "Quem pode utilizar o Assistente Laudos?",
-    answer:
-      "O Assistente Laudos é destinado exclusivamente a psicólogos, pois o laudo psicológico é documento privativo da profissão.",
-  },
-  {
     question: "O acesso é vitalício?",
     answer:
-      "Sim. O pagamento é único e libera o acesso vitalício à biblioteca e aos três assistentes inclusos nesta oferta.",
+      "Sim. O pagamento é único e libera o acesso vitalício à biblioteca e aos dois assistentes inclusos nesta oferta.",
   },
   {
     question: "Como recebo meu acesso?",
