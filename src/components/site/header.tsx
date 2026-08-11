@@ -13,7 +13,6 @@ export function Header() {
           <nav className="main-nav" aria-label="Navegação principal">
             <a href="#para-quem">Para quem é</a>
             <a href="#planilhas">Planilhas</a>
-            <a href="#assistentes">Assistentes</a>
             <a href="#duvidas">Dúvidas</a>
           </nav>
 
