@@ -464,3 +464,176 @@ main > section {
   .sheet-models-actions { flex-direction: column; }
   .sheet-models .btn { width: 100%; }
 }
+
+/* ============================================================
+   10. CORRIGEFÁCIL (/corrigefacil) — reaproveita .btn, .eyebrow,
+       .section-head, .audience-card, .steps-list, .offer-card, .faq-list
+   ============================================================
+   TUDO aqui é escopado por .cf-page. Nada nesta seção pode alterar a home:
+   ou o seletor começa com .cf-page, ou a classe começa com .cf-.
+
+   Os tokens da PLATAFORMA (tinta petróleo, fundo quente, pastéis) são
+   redeclarados dentro do escopo. É isso que faz .btn, .eyebrow, .steps-list
+   e companhia mudarem de paleta sem nenhuma regra nova: eles já leem
+   var(--ink), var(--line), var(--surface).
+   ------------------------------------------------------------ */
+.cf-page {
+  /* pastéis oficiais do PsicoPlanilhas 2.0 */
+  --cf-lime: #e8f0d9;
+  --cf-lilac: #e7e1f0;
+  --cf-cream: #f5ebd8;
+  --cf-mint: #d9ede0;
+  --cf-coral: #f4d9ce;
+  --cf-pink: #f0d9e3;
+
+  /* tinta, fundo e borda da plataforma, no lugar dos da home */
+  --ink: #0e2a38;
+  --ink-soft: #4a6470;
+  --line: #e4e7ea;
+  --surface: #fbfaf7;
+
+  background: var(--paper);
+  color: var(--ink);
+}
+
+/* tons pastéis — a cor é decorativa e cicla; não classifica nada */
+.cf-tone--lime { background: var(--cf-lime); }
+.cf-tone--lilac { background: var(--cf-lilac); }
+.cf-tone--cream { background: var(--cf-cream); }
+.cf-tone--mint { background: var(--cf-mint); }
+.cf-tone--coral { background: var(--cf-coral); }
+.cf-tone--pink { background: var(--cf-pink); }
+
+/* hero ------------------------------------------------------- */
+.cf-hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: var(--s-12);
+  align-items: center;
+}
+.cf-page .hero h1 { max-width: 22ch; }
+.cf-page .cf-hero-lead { max-width: 54ch; font-size: var(--text-lg); }
+.cf-hero-highlight {
+  display: inline-block;
+  margin: var(--s-6) 0 0;
+  border-radius: 999px;
+  background: var(--cf-mint);
+  padding: var(--s-2) var(--s-4);
+  color: var(--ink);
+  font-size: var(--text-sm);
+  font-weight: 500;
+}
+
+/* cartão de preço do hero — os pastéis já na primeira dobra */
+.cf-price-card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(160deg, var(--cf-lilac), var(--cf-cream));
+  padding: var(--s-8);
+  text-align: center;
+}
+.cf-price-label {
+  display: block;
+  color: var(--ink-soft);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.cf-price-value {
+  display: block;
+  margin-top: var(--s-2);
+  font-family: var(--font-serif), Georgia, serif;
+  font-size: var(--text-4xl);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+.cf-price-note { margin: var(--s-3) 0 0; color: var(--ink-soft); font-size: var(--text-sm); }
+.cf-price-actions { display: grid; gap: var(--s-3); margin-top: var(--s-8); }
+.cf-price-actions .btn { width: 100%; }
+/* no pastel, o fantasma precisa de superfície própria pra não sumir */
+.cf-price-actions .btn--ghost { background: var(--paper); border-color: transparent; }
+.cf-price-actions .btn--ghost:hover { background: color-mix(in srgb, var(--paper) 82%, var(--ink)); }
+
+/* vídeo ------------------------------------------------------- */
+.cf-video-panel { max-width: 900px; margin-inline: auto; margin-top: 0; }
+
+/* marca colorida dos cards de benefício (no lugar do .audience-icon verde) */
+.cf-card-mark {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: var(--radius-sm);
+  color: var(--ink);
+  font-weight: 600;
+}
+
+/* passos ------------------------------------------------------ */
+.cf-page .cf-steps li > span { color: var(--ink); opacity: 0.22; }
+.cf-page .cf-steps strong { font-size: var(--text-lg); }
+
+/* badges dos instrumentos ------------------------------------- */
+.cf-chips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--s-3);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.cf-chip {
+  /* a borda não é enfeite: em alto contraste / forced-colors o fundo
+     pastel some, e sem ela o badge deixaria de ter forma */
+  border: 1px solid rgba(14, 42, 56, 0.08);
+  border-radius: 999px;
+  padding: var(--s-3) var(--s-6);
+  color: var(--ink);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+
+/* Relatórios Pro (recurso opcional) --------------------------- */
+.cf-optional {
+  max-width: 72ch;
+  margin-inline: auto;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: var(--paper);
+  padding: var(--s-12);
+  text-align: center;
+}
+/* :not() de propósito — o aviso de não inclusão NÃO pode cair no cinza
+   secundário junto com o texto de apoio: ele é a informação que evita o
+   comprador achar que o relatório entra nos R$57. */
+.cf-optional > p:not(.cf-callout) { margin: var(--s-4) auto 0; max-width: 62ch; color: var(--ink-soft); }
+.cf-callout {
+  margin-top: var(--s-8);
+  border-left: 3px solid var(--action);
+  border-radius: var(--radius-sm);
+  background: var(--cf-coral);
+  padding: var(--s-4) var(--s-6);
+  color: var(--ink);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  text-align: left;
+}
+
+/* oferta ------------------------------------------------------ */
+/* o valor vem inteiro do conteúdo ("R$ 57,00"), sem <small> no cifrão */
+.cf-page .offer-price > strong { font-size: var(--text-4xl); }
+
+/* responsivo -------------------------------------------------- */
+@media (max-width: 900px) {
+  .cf-hero-grid { grid-template-columns: 1fr; gap: var(--s-8); }
+}
+@media (max-width: 768px) {
+  .cf-optional { padding: var(--s-8) var(--s-6); }
+  .cf-chips { justify-content: flex-start; gap: var(--s-2); }
+  .cf-chip { padding: var(--s-2) var(--s-4); font-size: var(--text-xs); }
+  .cf-price-card { padding: var(--s-6); }
+}
