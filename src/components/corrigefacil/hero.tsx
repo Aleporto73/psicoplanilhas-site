@@ -21,7 +21,7 @@ export function CorrigeFacilHero() {
             dados da aplicação e visualize o resultado organizado, com classificação,
             gráfico e histórico para consulta.
           </p>
-          <p className="cf-hero-highlight">21 instrumentos disponíveis no catálogo atual.</p>
+          <p className="cf-hero-highlight">20 instrumentos disponíveis no catálogo atual.</p>
         </div>
 
         <div className="cf-price-card">

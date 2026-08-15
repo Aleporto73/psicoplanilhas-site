@@ -21,7 +21,7 @@ export const corrigeFacilVideoUrl = "/videos/corrigefacil-demo.mp4";
 
 export const appLoginUrl = "https://app.psicoplanilha.com/login";
 
-/** Catálogo atual: 21 instrumentos, em ordem alfabética pelo CÓDIGO.
+/** Catálogo atual: 20 instrumentos, em ordem alfabética pelo CÓDIGO.
  *
  *  A ordem está escrita, não calculada. `localeCompare` em pt-BR trata
  *  hífen e underscore como separadores ignoráveis no nível primário e
@@ -47,7 +47,6 @@ export const corrigeFacilInstruments = [
   "SDQ-POR",
   "SNAP-IV-18",
   "SNAP-IV-26",
-  "TDF",
   "TRACO-ANSIEDADE",
   "TRILHAS_PRE",
 ] as const;
@@ -96,7 +95,7 @@ export const corrigeFacilSteps = [
 ] as const;
 
 export const corrigeFacilOfferItems = [
-  "21 instrumentos disponíveis",
+  "20 instrumentos disponíveis",
   "Resultados e classificações organizados",
   "Gráficos",
   "Histórico das avaliações",
@@ -129,6 +128,6 @@ export const corrigeFacilFaq: FaqItem[] = [
   {
     question: "Quais instrumentos estão disponíveis?",
     answer:
-      "Os 21 instrumentos exibidos nesta página correspondem ao catálogo atual do CorrigeFácil.",
+      "Os 20 instrumentos exibidos nesta página correspondem ao catálogo atual do CorrigeFácil.",
   },
 ];

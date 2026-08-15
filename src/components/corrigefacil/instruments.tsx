@@ -2,7 +2,7 @@ import { corrigeFacilInstruments, corrigeFacilTones } from "@/content/corrigefac
 
 // Catálogo completo.
 //
-// Os 21 aparecem de uma vez, em wrap: sem "ver mais", sem carrossel, sem
+// Os 20 aparecem de uma vez, em wrap: sem "ver mais", sem carrossel, sem
 // paginação, sem acordeão. Quem chega aqui está decidindo a compra e a
 // pergunta é uma só — "o meu instrumento está na lista?". Qualquer coisa
 // que esconda parte da lista transforma essa pergunta em trabalho.
